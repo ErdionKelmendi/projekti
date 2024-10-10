@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="projekti final jquery.css">
+</head>
+<body>
+    <ul>
+        <li><a href="projekti final jquery.html">Home</a>
+        <li><a href="apply.html">Apply</a></li>
+        <li><a href="Quiz.html">Quiz</a></li>
+        <li><a href="Game.html">Game</a></li>
+        <li><a href="contact us.html">Contact Us</a></li>
+        </ul>
+        <br>
+<div style="background-color: black; color: white; border: 5px solid gold; box-shadow: 5px 10px 20px blue; border-radius: 10px; display: block;">
+    <h1>Fun Math Quiz!!!!!!!!</h1>
+    <h2>Q1.1783454<sup>2</sup></h2>
+    <input type="radio" id="correct1"><label>A.3180708170116</label><br>
+    <input type="radio"><label>B.7329874856547</label><br>
+    <input type="radio"><label>C.2364995457384</label><br>
+    <input type="radio"><label>D.4353214785679</label>
+
+    <h2>Q2.3654336<sup>2</sup></h2>
+    <input type="radio"><label>A.45715515554542</label><br>
+    <input type="radio"><label>B.47464651566165</label><br>
+    <input type="radio" id="correct2"><label>C.13354171600896</label><br>
+    <input type="radio"><label>D.54656456869789</label>
+
+    <h2>Q3.46972348<sup>2</sup></h2>
+    <input type="radio"><label>A.79523465235495276</label><br>
+    <input type="radio" id="correct3"><label>B.2206401476633104</label><br>
+    <input type="radio"><label>C.43546418151613534</label><br>
+    <input type="radio"><label>D.41851357413572742</label>
+
+    <h2>Q4.46671346<sup>2</sup></h2>
+    <input type="radio"><label>A.45745646815765456</label><br>
+    <input type="radio"><label>B.45294526949529549</label><br>
+    <input type="radio"><label>C.76845318975475466</label><br>
+    <input type="radio" id="correct4"><label>D.2178214537451716</label>
+    <br>
+    <br>
+    <input type="submit" id="s1" style="height: 30px; width: 100px; margin-left: 15px; padding-left: 15px; color: yellow; background-color: crimson; border: 4px solid lightgreen; border-radius: 10px;">
+</div>
+</body>
+    <script src="projekti final jquery.js"></script>
+<script src="https://code.jquery.com/jquery-2.1.0.js"></script>
+<script>
+    $("#s1").click(function(){
+        var score = 0
+        if(document.getElementById("correct1").checked){
+            score ++;
+        };
+        if(document.getElementById("correct2").checked){
+            score++;
+        };
+        if(document.getElementById("correct3").checked){
+            score++;
+        };
+        
+        if(document.getElementById("correct4").checked){
+            score++;
+        };
+        window.alert("Your score is: "+score+"/4")
+    })
+</script>
+</html>

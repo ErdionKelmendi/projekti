@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="projekti final jquery.css">
+</head>
+<style>
+    body {
+      text-align: center;
+      padding: 50px;
+    }
+    input{
+        height: 30px; 
+        width: 100px; 
+        margin-left: 15px; 
+        padding-left: 15px; 
+        color: yellow; 
+        background-color: crimson; 
+        border: 4px solid lightgreen; 
+        border-radius: 10px;
+    }
+    button{
+        height: 30px; 
+        width: 100px; 
+        margin-left: 15px; 
+        padding-left: 15px; 
+        color: yellow; 
+        background-color: crimson; 
+        border: 4px solid lightgreen; 
+        border-radius: 10px;
+    }
+    div{
+        text-align: center; color: white;
+        background-color: black;
+        width: 600px; 
+        margin-left: 330px;
+        border: 5px solid whitesmoke;
+        border-radius: 10px;
+        box-shadow: 5px 10px 20px white;
+    }
+  </style>
+<body style="background-color: rgb(106, 86, 86);">
+    <ul>
+        <li><a href="projekti final jquery.html">Home</a>
+        <li><a href="apply.html">Apply</a></li>
+        <li><a href="Quiz.html">Quiz</a></li>
+        <li><a href="Game.html">Game</a></li>
+        <li><a href="contact us.html">Contact Us</a></li>
+    </ul>
+    <br>
+    <br>
+    <div>
+        <h1>Number Guessing Game</h1>
+        <p>Guess a number between 1 and 100:</p>
+        <input type="number" id="guessInput">
+        <button onclick="checkGuess()">Guess</button>
+        <p id="message"></p>
+      </div>
+        <script>
+      var randomNumber = Math.floor(Math.random() * 100) + 1;
+      
+      var guessInput = document.getElementById('guessInput');
+      var message = document.getElementById('message');
+      
+      function checkGuess() {
+        var guess = parseInt(guessInput.value);
+      
+        if (isNaN(guess) || guess < 1 || guess > 100) {
+          message.textContent = "Please enter a valid number between 1 and 100.";
+          return;
+        }
+      
+        if (guess === randomNumber) {
+          message.textContent = "Congratulations! You guessed the correct number!";
+        } else if (guess < randomNumber) {
+          message.textContent = "Too low! Try again.";
+        } else {
+          message.textContent = "Too high! Try again.";
+        }
+      
+        guessInput.value = '';
+      }
+      
+        </script>
+</body>
+</html>
